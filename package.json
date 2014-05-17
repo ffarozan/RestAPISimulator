@@ -1,0 +1,19 @@
+{
+	"name"        : "RestAPISimulator",
+	"version"     : "0.0.1",
+	"author"      : "",
+	"description" : "A http server for simulating RESTful Web APIs",
+	"keywords"    : [
+		"http",
+		"REST",
+		"Simulator"
+	],
+	"dependencies": {
+		"express"   : "3.5.x",
+		"http-proxy": "0.10.x"
+	},
+	"license"     : "",
+	"engines"     : {
+		"node": ">=0.9.9"
+	}
+}
