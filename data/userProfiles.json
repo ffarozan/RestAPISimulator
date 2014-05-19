@@ -1,242 +1,61 @@
 {
 	"GET"   : {
-		"/userProfiles/households/456/preferences/parentalRatingThreshold": [
+		"/userProfiles": [
 			200,
-			"application/text;charset=\"utf-8\"", "C8"
-		],
-
-		"/userProfiles/households/456/preferences/hideAdultTitles": [
-			200,
-			"application/text;charset=\"utf-8\"", "true"
-		],
-
-		"/userProfiles/households/456/preferences/parentalRatingPin": [
-			200,
-			"application/text;charset=\"utf-8\"", "0000"
-		],
-
-		"/userProfiles/households/456/devices/4560/preferences/audioLanguage": [
-			200,
-			"application/text;charset=\"utf-8\"", "eng"
-		],
-
-		"/userProfiles/households/456/preferences/uiLanguage": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"eng"
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/subtitleLanguage": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"eng"
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/AudioDescriptionFlag": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"true"
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/subtitlesPresentationFlag": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"true"
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/startChannel": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"userdefined"
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/userStartChannel": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"Program_606"
-		],
-		"/userProfiles/households/456/preferences/seriesBookingChannelsChoice"              : [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"CROSS"
-		],
-		"/userProfiles/households/456/preferences/seriesBookingEpisodesChoice"              : [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"ALL"
-		],
-
-		"/userProfiles/households/456/preferences/startGuardTimeAutoFlag": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"false"
-		],
-
-		"/userProfiles/households/456/preferences/endGuardTimeAutoFlag": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"false"
-		],
-
-		"/userProfiles/households/456/preferences/startGuardTime": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"900"
-		],
-
-		"/userProfiles/households/456/preferences/defaultStartChannel": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"ESPN"
-		],
-
-		"/userProfiles/households/456/preferences/endGuardTime": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"900"
-		],
-
-		"/userProfiles/households/456/preferences/diskSpaceManagementMode": [
-			200,
-			"application/text;charset=\"utf-8\"",
-			"AUTOMATIC"
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/favoriteChannels": [
-			200,
-			"application/json;charset=\"utf-8\"", [
+			"application/json;charset=\"utf-8\"", 
+			[
 				{
-					"sequenceNumber"      : 0,
-					"logicalChannelNumber": 602,
-					"channelId"           : "dvb://600.1F.25A?cnid=A880"
+					"id": "1001",
+					"name": "Firdousi",
+					"email": "ffarozan@gmail.com"
 				},
 				{
-					"sequenceNumber"      : 1,
-					"logicalChannelNumber": 604,
-					"channelId"           : "dvb://600.1F.25C?cnid=A880"
-				},
-				{
-					"sequenceNumber"      : 2,
-					"logicalChannelNumber": 605,
-					"channelId"           : "dvb://600.1F.25D?cnid=A880"
-				},
-				{
-					"sequenceNumber"      : 3,
-					"logicalChannelNumber": 606,
-					"channelId"           : "dvb://600.1F.25E?cnid=A880"
-				}
-			]
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/lockedChannels": [
-			200,
-			"application/json;charset=\"utf-8\"", [
-				{
-					"channelId" : "dvb://600.1F.259?cnid=A880",
-					"timeLocked": false
-
-				},
-				{
-					"channelId" : "dvb://600.1F.25A?cnid=A880",
-					"timeLocked": false
-
-				},
-				{
-					"channelId" : "dvb://600.1F.25C?cnid=A880",
-					"timeLocked": false
+					"id": "1002",
+					"name": "Fiaz",
+					"email": "zeeshanfiaz@gmail.com"
 				}
 			]
 		]
 	},
 	"POST"  : {
-		"/userProfiles/households/456/preferences/parentalRatingThreshold": [
-			200
-
+		"/userProfiles": [
+			200,
+			"application/json;charset=\"utf-8\"",
+			{
+				"status" : "0"
+			}
 		]
 	},
 	"PUT"   : {
-		"/userProfiles/households/456/userProfiles/0000_0000_0/favoriteChannels"                : [
+		"/userProfiles/1001": [
 			200,
-			"application/json;charset=\"utf-8\""
+			"application/json;charset=\"utf-8\"",
+			{
+				"status" : "0"
+			}
 		],
-		"/userProfiles/households/456/preferences/parentalRatingThreshold"                      : [
-			200
-		],
-		"/userProfiles/households/456/preferences/hideAdultTitles"                              : [
-			200
-		],
-		"/userProfiles/households/456/preferences/parentalRatingPin"                            : [
+		"/userProfiles/1002": [
 			200,
-			"text/plain;charset=\"utf-8\""
-		],
-		"/userProfiles/households/456/preferences/uiLanguage"                                   : [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-		"/userProfiles/households/456/devices/4560/preferences/audioLanguage"                   : [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/subtitleLanguage"    : [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/AudioDescriptionFlag": [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/subtitlesPresentationFlag": [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/startChannel": [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/userStartChannel": [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-
-		"/userProfiles/households/456/preferences/seriesBookingChannelsChoice": [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-		"/userProfiles/households/456/preferences/seriesBookingEpisodesChoice": [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-
-		"/userProfiles/households/456/preferences/startGuardTime": [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-
-		"/userProfiles/households/456/preferences/endGuardTime"          : [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-		"/userProfiles/households/456/preferences/startGuardTimeAutoFlag": [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-
-		"/userProfiles/households/456/preferences/endGuardTimeAutoFlag": [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-
-		"/userProfiles/households/456/preferences/diskSpaceManagementMode"                : [
-			200,
-			"text/plain;charset=\"utf-8\""
-		],
-		"/userProfiles/households/456/userProfiles/0000_0000_0/preferences/lockedChannels": [
-			200,
-			"application/json;charset=\"utf-8\""]
-
+			"application/json;charset=\"utf-8\"",
+			{
+				"status" : "0"
+			}
+		]
 	},
-	"DELETE": {}
+	"DELETE": {
+		"/userProfiles/1001": [
+			200,
+			"application/json;charset=\"utf-8\"",
+			{
+				"status" : "0"
+			}
+		],
+		"/userProfiles/1002": [
+			200,
+			"application/json;charset=\"utf-8\"",
+			{
+				"status" : "0"
+			}
+		]
+	}
 }
