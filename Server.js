@@ -14,7 +14,13 @@ function setupSimulator(server){
 	userProfiles = require(base_dir + path.sep + config.userProfilesFile);
 	userTransactions = require(base_dir + path.sep + config.userTransactionsFile);
 
-	var httpResponseConstructor = function(p_body, p_res){
+	var httpResponseConstructor = function(request, response, simulatorContent){
+		var httpMethodSpecificContent = simulatorContent[request.method];
+		var p_body = httpMethodSpecificContent[request.originalUrl];
+		if (!p_body) {
+			response.send(404);
+		}
+		
 		var l_statusCode = p_body[0];
 		var l_contentType = p_body[1];
 
@@ -24,39 +30,26 @@ function setupSimulator(server){
 			var l_content = p_body[2] ? p_body[2] : "";
 		}
 
-		p_res.status(l_statusCode)
+		response.status(l_statusCode)
 			.header('Content-Type', l_contentType)
 			.header('Content-Length', l_content.length)
 			.end(l_content);
 	};
 
-	var userProfilesRequestHandler = function(req, res){
-		console.log("I'm here - " + req.originalUrl);
-		var upmGet = userProfiles['GET'];
-		var l_body = upmGet[req.originalUrl];
-
-		if (!l_body) {
-			res.send(404);
-		} else {
-			httpResponseConstructor(l_body, res);
-		}
+	var userProfilesRequestHandler = function(request, response){
+		httpResponseConstructor(request, response, userProfiles);
 	};
 
-	var userTransactionsRequestHandler = function(req, res){
-		var l_body = userTransactions[req.originalUrl];
-
-		if (!l_body) {
-			res.send(404);
-		}
-		else {
-			httpResponseConstructor(l_body, res);
-		}
+	var userTransactionsRequestHandler = function(request, response){
+		httpResponseConstructor(request, response, userTransactions);
 	};
 
-	server.get('/userProfiles/*', userProfilesRequestHandler)
-		.post('/userProfiles/*', userProfilesRequestHandler)
-		.get('/userTransations/*', userTransactionsRequestHandler)
-		.put('/userTransations/*', userTransactionsRequestHandler);
+	server.get('/userProfiles*', userProfilesRequestHandler)
+		.post('/userProfiles*', userProfilesRequestHandler)
+		.put('/userProfiles*', userProfilesRequestHandler)
+		.delete('/userProfiles*', userProfilesRequestHandler)
+		.get('/userTransactions*', userTransactionsRequestHandler)
+		.put('/userTransactions*', userTransactionsRequestHandler);
 		
 }
 
