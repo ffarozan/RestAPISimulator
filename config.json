@@ -2,5 +2,6 @@
 	"port"          : "8080",
 	"enableLogging" : "true",
 	"userProfilesFile"   : "data/userProfiles.json",
-	"userTransactionsFile" : "data/userTransactions.json"
+	"userTransactionsFile" : "data/userTransactions.json",
+	"categoriesFile" : "data/categories.json"
 }

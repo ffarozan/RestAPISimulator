@@ -1,0 +1,112 @@
+{
+	"GET"   : {
+		"/categories/0000": [
+			200,
+			"application/json;charset=\"utf-8\"", 
+			[
+				{
+					"id": "3001",
+					"name": "Grocery & Staples",
+					"type" : "0"
+				},
+				{
+					"id": "3002",
+					"name": "Bread, Dairy & Eggs",
+					"type" : "0"
+				},
+				{
+					"id": "3003",
+					"name": "Beverages",
+					"type" : "0"
+				},
+				{
+					"id": "3004",
+					"name": "Personal Care",
+					"type" : "0"
+				},
+				{
+					"id": "3005",
+					"name": "Household",
+					"type" : "0"
+				}
+			]
+		],
+		"/categories/3001": [
+			200,
+			"application/json;charset=\"utf-8\"",
+			[
+				{
+					"id": "3101",
+					"name": "Dals & Pulses",
+					"type" : "1"
+				},
+				{
+					"id": "3102",
+					"name": "Dry Fruits",
+					"type" : "1"
+				},
+				{
+					"id": "3103",
+					"name": "Oils",
+					"type" : "1"
+				},
+				{
+					"id": "3104",
+					"name": "Masalas & Spices",
+					"type" : "1"
+				},
+				{
+					"id": "3105",
+					"name": "Rice products",
+					"type" : "1"
+				}
+			]
+		],
+		"/items/3101": [
+			200,
+			"application/json;charset=\"utf-8\"",
+			[
+				{
+					"id": "3201",
+					"name": "Channa Dal",
+					"brandname": "Udhayam",
+					"mrp": "205.00",
+					"price": "195.00",
+					"quantity": "1 kg"
+				},
+				{
+					"id": "3202",
+					"name": "Moong Dal",
+					"brandname": "Reliance",
+					"mrp": "135.00",
+					"price": "125.00",
+					"quantity": "1 kg"
+				},
+				{
+					"id": "3203",
+					"name": "Toor Dal",
+					"brandname": "MTR",
+					"mrp": "235.00",
+					"price": "195.00",
+					"quantity": "1 kg"
+				},
+				{
+					"id": "3204",
+					"name": "Urud Dal",
+					"brandname": "Udhayam",
+					"mrp": "156.00",
+					"price": "145.00",
+					"quantity": "1 kg"
+				},
+				{
+					"id": "3205",
+					"name": "Peanuts",
+					"brandname": "JustBuy Special",
+					"mrp": "87.00",
+					"price": "72.00",
+					"quantity": "500 gm"
+				}
+			]
+		]
+	}
+}

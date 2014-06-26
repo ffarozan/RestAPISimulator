@@ -1,46 +1,40 @@
-{
-	"GET"   : {
-		"/userTransactions/1001": [
-			200,
-			"application/json;charset=\"utf-8\"", 
-			[
-				{
-					"transactionId": "2001",
-					"status" : "closed",
-					"listOfContents" : [
-						{
-							"direction" : "to",
-							"content" : "Sugar: 1 kg, 3 Roses Tea: 250 gm"
-						},
-						{
-							"direction" : "from",
-							"content" : "To be paid : Rs. 154, with a saving of Rs.32. Estimated time of delivery - 5-7 PM. Please confirm 1 or reject 2"
-						},
-						{
-							"direction" : "to",
-							"content" : "1"
-						},
-						{
-							"direction" : "from",
-							"content" : "Delivered, and Paid"
-						}
-					]
-				},
-				{
-					"transactionId": "2002",
-					"status" : "open",
-					"listOfContents" : [
-						{
-							"direction" : "to",
-							"content" : "Oats: 1 kg, Tropicana Litchi: 1 litre"
-						},
-						{
-							"direction" : "from",
-							"content" : "Can you confirm if Oats you want is Quaker or Saffola? Also we do not have Litch flavor. Do you want to change it to Coconut + Litchi flavor?"
-						}
-					]
-				}
-			]
+[
+	{
+		"transactionId": "2001",
+		"status" : "closed",
+		"listOfContents" : [
+			{
+				"direction" : "to",
+				"content" : "Sugar: 1 kg, 3 Roses Tea: 250 gm"
+			},
+			{
+				"direction" : "from",
+				"content" : "To be paid : Rs. 154, with a saving of Rs.32. Estimated time of delivery - 5-7 PM. Please confirm 1 or reject 2"
+			},
+			{
+				"direction" : "to",
+				"content" : "1"
+			},
+			{
+				"direction" : "from",
+				"content" : "Delivered, and Paid"
+			}
+		]
+	},
+	{
+		"transactionId": "2002",
+		"status" : "open",
+		"listOfContents" : [
+			{
+				"direction" : "to",
+				"content" : "Oats: 1 kg, Tropicana Litchi: 1 litre"
+			},
+			{
+				"direction" : "from",
+				"content" : "Can you confirm if Oats you want is Quaker or Saffola? Also we do not have Litch flavor. Do you want to change it to Coconut + Litchi flavor?"
+			}
 		]
 	}
-}
+]
+
+

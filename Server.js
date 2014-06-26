@@ -9,10 +9,11 @@ config = require(base_dir + path.sep + 'config');
 
 function setupSimulator(server){
 	"use strict";
-	var userProfiles, userTransactions;
+	var userProfiles, userTransactions, categories;
 
 	userProfiles = require(base_dir + path.sep + config.userProfilesFile);
 	userTransactions = require(base_dir + path.sep + config.userTransactionsFile);
+	categories = require(base_dir + path.sep + config.categoriesFile);
 
 	var httpResponseConstructor = function(request, response, simulatorContent){
 		var httpMethodSpecificContent = simulatorContent[request.method];
@@ -43,13 +44,19 @@ function setupSimulator(server){
 	var userTransactionsRequestHandler = function(request, response){
 		httpResponseConstructor(request, response, userTransactions);
 	};
+	
+	var categoriesRequestHandler = function(request, response){
+		httpResponseConstructor(request, response, categories);
+	};
 
 	server.get('/userProfiles*', userProfilesRequestHandler)
 		.post('/userProfiles*', userProfilesRequestHandler)
 		.put('/userProfiles*', userProfilesRequestHandler)
 		.delete('/userProfiles*', userProfilesRequestHandler)
 		.get('/userTransactions*', userTransactionsRequestHandler)
-		.put('/userTransactions*', userTransactionsRequestHandler);
+		.put('/userTransactions*', userTransactionsRequestHandler)
+		.get('/categories*', categoriesRequestHandler)
+		.get('/items*', categoriesRequestHandler);
 		
 }
 

@@ -15,10 +15,48 @@
 					"email": "zeeshanfiaz@gmail.com"
 				}
 			]
+		],
+		"/userProfiles/1001": [
+			200,
+			"application/json;charset=\"utf-8\"",
+			{
+				"firstname" : "Firdousi",
+				"lastname" : "Farozan",
+				"addressline1" : "2/783-E, Kazura Garden",
+				"addressline2" : "I Street, Neelankarai",
+				"pincode" : "600115",
+				"timeRange" : "B"
+			}
+		],
+		"/userProfiles/1002": [
+			200,
+			"application/json;charset=\"utf-8\"",
+			{
+				"firstame" : "Fiaz",
+				"lastname" : "Zeeshan",
+				"addressline1" : "1, Rajan Street",
+				"addressline2" : "Meenakshi Nagar, Pallavaram",
+				"pincode" : "600043",
+				"timeRange" : "A"
+			}
 		]
 	},
 	"POST"  : {
 		"/userProfiles": [
+			200,
+			"application/json;charset=\"utf-8\"",
+			{
+				"status" : "0"
+			}
+		],
+		"/userProfiles/1001": [
+			200,
+			"application/json;charset=\"utf-8\"",
+			{
+				"status" : "0"
+			}
+		],
+		"/userProfiles/1002": [
 			200,
 			"application/json;charset=\"utf-8\"",
 			{
